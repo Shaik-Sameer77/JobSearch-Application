@@ -30,7 +30,8 @@ function SuccessPage() {
         backgroundColor: "#f0f0f0",
       }}
     >
-        <Paper elevation={3} sx={{ padding: "20px", width: "100%", overflow: "auto" }}>
+
+        <Paper elevation={3} sx={{ padding: "20px", width: "90%", overflow: "auto" }} >
           <Typography variant="h4" sx={{ mb: 2, color: "#1976d2" }}>Application Submitted Successfully</Typography>
           <Typography variant="h6" sx={{ mb: 2 }}>Application Preview:</Typography>
           <Box sx={{ mb: 2 }}>
