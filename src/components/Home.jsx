@@ -32,7 +32,7 @@ function Home() {
   const user = useSelector((state) => state.loggedinUser);
   const [value, setValue] = useState("javascript");
   const [loading, setLoading] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 600px)');
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   useEffect(() => {
     if (!user.email) {
@@ -76,7 +76,7 @@ function Home() {
 
   return (
     <React.Fragment>
-      <Box sx={{ bgcolor: "", height: "100vh", }}>
+      <Box sx={{ bgcolor: "", height: "100vh" }}>
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -94,67 +94,65 @@ function Home() {
         </AppBar>
 
         <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: isMobile ? "column" : "row", // Change direction for mobile
-      }}
-    >
-      <Typography variant="h5" component="h5" sx={{ m: 5 }}>
-        Welcome, {user.firstName} {user.lastName}
-      </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          mt: isMobile ? 2 : 0, // Add margin-top for mobile
-          border: "1px solid blue",
-          width: isMobile ? "100%" : "25%", // Adjust width for mobile
-          maxWidth: isMobile ? "90%" : "25%", // Add max width for larger screens
-        }}
-        component="form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          getData();
-        }}
-      >
-        <InputBase
-          sx={{ ml: 1, flex: 1 }}
-          placeholder="Search for jobs by programming language"
-          inputProps={{ "aria-label": "search jobs" }}
-          onChange={(e) => {
-            console.log("e,target.vbalue", e.target.value);
-            setValue(e.target.value);
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: isMobile ? "column" : "row", // Adjust direction for mobile
           }}
-        />
-        <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-          <SearchIcon />
-        </IconButton>
-      </Box>
-    </Box>
-        <Grid container spacing={2} sx={{ p: 2 }}>
-      {searchResults.map((s) => (
-        <Grid item key={s.job_id} xs={isMobile ? 12 : 6} sm={isMobile ? 12 : 6} md={isMobile ? 12 : 4} lg={isMobile ? 12 : 3}>
-          <JobCard job={s} />
+        >
+          <Typography variant="h5" component="h5" sx={{ m: 5 }}>
+            Welcome, {user.firstName} {user.lastName}
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              mt: isMobile ? 2 : 0, // Add margin-top for mobile
+              border: "1px solid blue",
+              width: isMobile ? "100%" : "25%", // Adjust width for mobile
+              maxWidth: isMobile ? "90%" : "25%", // Add max width for larger screens
+            }}
+            component="form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              getData();
+            }}
+          >
+            <InputBase
+              sx={{ ml: 1, flex: 1 }}
+              placeholder="Search for jobs by programming language"
+              inputProps={{ "aria-label": "search jobs" }}
+              onChange={(e) => {
+                console.log("e,target.vbalue", e.target.value);
+                setValue(e.target.value);
+              }}
+            />
+            <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
+              <SearchIcon />
+            </IconButton>
+          </Box>
+        </Box>
+        <Grid sx={{ p: 8 }}>
+          {searchResults.map((s) => (
+            <JobCard job={s} />
+          ))}
+          {searchResults.length == 0 && (
+            <Card sx={{ minWidth: 275 }}>
+              <Typography
+                variant="h5"
+                sx={{ color: "#1976d2", py: 24, textAlign: "center" }}
+              >
+                <IconButton type="submit" aria-label="search">
+                  <SearchIcon sx={{ fontSize: "55px" }} />
+                </IconButton>
+                {!loading
+                  ? "No Jobs available"
+                  : "Loading jobs, Please wait ..."}
+              </Typography>
+            </Card>
+          )}
         </Grid>
-      ))}
-      {searchResults.length === 0 && (
-        <Grid item xs={12}>
-          <Card sx={{ minWidth: 275 }}>
-            <Typography
-              variant="h5"
-              sx={{ color: "#1976d2", py: 4, textAlign: "center" }}
-            >
-              <IconButton type="submit" aria-label="search">
-                <SearchIcon sx={{ fontSize: "55px" }} />
-              </IconButton>
-              {!loading ? "No Jobs available" : "Loading jobs, Please wait ..."}
-            </Typography>
-          </Card>
-        </Grid>
-      )}
-    </Grid>
       </Box>
     </React.Fragment>
   );
