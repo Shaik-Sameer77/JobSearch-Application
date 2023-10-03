@@ -133,7 +133,7 @@ function Home() {
             </IconButton>
           </Box>
         </Box>
-        <Grid sx={{ p: 8 }}>
+        <Grid p={isMobile ? 1.25 : 8}>
           {searchResults.map((s) => (
             <JobCard job={s} />
           ))}
