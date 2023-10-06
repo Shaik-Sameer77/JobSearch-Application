@@ -249,7 +249,6 @@ export default function SignUp() {
         <Alert
           onClose={handleClose}
           severity={severity}
-          posi
           sx={{ width: "100%" }}
         >
           {msg}
