@@ -1,6 +1,6 @@
 # Job Search Application
 
-QuadB Tech is a job search application that simplifies the process of finding job opportunities. Built with React and leveraging various powerful packages, the application provides a user-friendly interface for searching and applying for jobs.
+This is a job search application that simplifies the process of finding job opportunities. Built with React and leveraging various powerful packages, the application provides a user-friendly interface for searching and applying for jobs.
 
 ## Packages Used
 
