@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Job Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+QuadB Tech is a job search application that simplifies the process of finding job opportunities. Built with React and leveraging various powerful packages, the application provides a user-friendly interface for searching and applying for jobs.
 
-## Available Scripts
+## Packages Used
 
-In the project directory, you can run:
+- **@emotion/react**: Library for writing styles with JavaScript.
+- **@emotion/styled**: Styled-components library for Emotion.
+- **@hookform/resolvers**: Resolvers for React Hook Form.
+- **@mui/icons-material**: Material-UI icons for a visually appealing design.
+- **@mui/material**: Material-UI components for consistent and responsive UI elements.
+- **@reduxjs/toolkit**: Redux toolkit for efficient state management.
+- **@testing-library/jest-dom**: Jest DOM utilities for testing.
+- **@testing-library/react**: Testing utilities for React applications.
+- **@testing-library/user-event**: User events utilities for testing user interactions.
+- **axios**: HTTP client for making API requests.
+- **react**: Core React library for building user interfaces.
+- **react-dom**: React's DOM rendering.
+- **react-hook-form**: Library for flexible and easy-to-use forms with React.
+- **react-redux**: Official React bindings for Redux.
+- **react-router**: Core library for routing in React applications.
+- **react-router-dom**: DOM bindings for React Router.
+- **react-scripts**: Scripts and configuration used by Create React App.
+- **redux-persist**: Persist and rehydrate a Redux store.
+- **web-vitals**: Library for tracking web performance metrics.
+- **yup**: Schema validation library for JavaScript objects.
 
-### `npm start`
+## Local Storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Here we are utilizing local storage for storing user data, providing a seamless and personalized user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Data Fetching
 
-### `npm test`
+The application fetches job data using the JSearch API from Rapid API, ensuring up-to-date and relevant job listings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+Explore the live Job Search Application: [Job Search](https://job-search-application.vercel.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out with any questions or feedback. Happy job hunting!
